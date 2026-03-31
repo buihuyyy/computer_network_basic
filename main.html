@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mạng Máy Tính Cơ Bản</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #ddeae1;
+      color: #222;
+      line-height: 1.6;
+    }
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    header {
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+    header p {
+      color: #555;
+      font-size: 15px;
+    }
+    .about-me {
+      margin-bottom: 24px;
+      padding: 16px;
+      background: #90bcf3;
+      border-radius: 10px;
+    }
+    .about-me h2 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    .about-me p {
+      margin-bottom: 8px;
+    }
+    .accordion-item {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .accordion-button {
+      width: 100%;
+      text-align: left;
+      padding: 16px;
+      background: #eaf0f8;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 17px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .accordion-button:hover {
+      background: #dfe8f5;
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+      padding: 0 16px;
+      background: #fff;
+    }
+    .accordion-content .content-inner {
+      padding: 16px 0;
+    }
+    .accordion-content ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+    .accordion-content li {
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mạng Máy Tính</h1>
+      <p>Trình bày kiến thức cơ bản về mạng máy tính</p>
+    </header>
+
+    <section class="about-me">
+      <h2>Giới thiệu bản thân</h2>
+      <p><strong>Họ và tên:</strong> Bùi Quang Huy</p>
+      <p><strong>Chuyên ngành:</strong> An toàn thông tin</p>
+      <p><strong>Trường:</strong> Học Viện Công Nghệ Bưu Chính Viễn Thông</p>
+    </section>
+
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-button">1. Một số mô hình mạng phổ biến: LAN, WAN, MAN, PAN</button>
+        <div class="accordion-content">
+          <div class="content-inner">
+            <ul>
+              <li><strong>LAN (Local Area Network):</strong> mạng cục bộ, thường dùng trong nhà, trường học, văn phòng.</li>
+              <li><strong>WAN (Wide Area Network):</strong> mạng diện rộng, kết nối trên phạm vi lớn, ví dụ Internet.</li>
+              <li><strong>MAN (Metropolitan Area Network):</strong> mạng đô thị, phủ trong một thành phố hoặc khu vực lớn.</li>
+              <li><strong>PAN (Personal Area Network):</strong> mạng cá nhân, ví dụ điện thoại kết nối tai nghe Bluetooth.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-button">2. Các thiết bị mạng cơ bản thường gặp</button>
+        <div class="accordion-content">
+          <div class="content-inner">
+            <ul>
+              <li><strong>Router:</strong> định tuyến dữ liệu giữa các mạng khác nhau.</li>
+              <li><strong>Switch:</strong> kết nối nhiều thiết bị trong cùng một mạng LAN.</li>
+              <li><strong>Hub:</strong> thiết bị cũ hơn switch, gửi dữ liệu đến tất cả cổng.</li>
+              <li><strong>Modem:</strong> kết nối mạng nội bộ với nhà cung cấp Internet.</li>
+              <li><strong>Access Point:</strong> phát Wi-Fi cho các thiết bị không dây.</li>
+              <li><strong>Firewall:</strong> kiểm soát và lọc lưu lượng mạng để bảo vệ hệ thống.</li>
+              <li><strong>NIC (Card mạng):</strong> giúp máy tính kết nối vào mạng.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-button">3. 7 tầng trong mạng (Mô hình OSI)</button>
+        <div class="accordion-content">
+          <div class="content-inner">
+            <ul>
+              <li><strong>Tầng 7 - Application:</strong> giao tiếp trực tiếp với ứng dụng người dùng.</li>
+              <li><strong>Tầng 6 - Presentation:</strong> chuyển đổi định dạng dữ liệu, mã hóa, giải mã.</li>
+              <li><strong>Tầng 5 - Session:</strong> thiết lập, duy trì, kết thúc phiên làm việc.</li>
+              <li><strong>Tầng 4 - Transport:</strong> truyền dữ liệu đầu cuối, gồm TCP/UDP.</li>
+              <li><strong>Tầng 3 - Network:</strong> định tuyến, địa chỉ IP.</li>
+              <li><strong>Tầng 2 - Data Link:</strong> truyền dữ liệu trong mạng cục bộ, địa chỉ MAC.</li>
+              <li><strong>Tầng 1 - Physical:</strong> dây cáp, sóng, tín hiệu điện.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-button">4. Địa chỉ IP và Domain là gì?</button>
+        <div class="accordion-content">
+          <div class="content-inner">
+            <p><strong>IP Address</strong> là địa chỉ định danh của thiết bị trong mạng, ví dụ: <code>192.168.1.10</code>.</p>
+            <p style="margin-top: 8px;">
+              <strong>Domain</strong> là tên dễ nhớ của website, ví dụ: <code>google.com</code>.
+            </p>
+            <p style="margin-top: 8px;">
+              Khi bạn nhập domain, hệ thống DNS sẽ chuyển domain thành địa chỉ IP để tìm đúng máy chủ.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-button">5. Các giao thức mạng phổ biến: TCP, UDP, FTP, ICMP, HTTP/HTTPS</button>
+        <div class="accordion-content">
+          <div class="content-inner">
+            <ul>
+              <li><strong>TCP:</strong> giao thức có kết nối, đảm bảo dữ liệu đến đúng và đủ.</li>
+              <li><strong>UDP:</strong> giao thức không kết nối, nhanh nhưng không đảm bảo nhận đủ dữ liệu.</li>
+              <li><strong>FTP:</strong> giao thức truyền tệp.</li>
+              <li><strong>ICMP:</strong> dùng để kiểm tra và báo lỗi mạng, ví dụ lệnh ping.</li>
+              <li><strong>HTTP:</strong> giao thức truyền tải nội dung web.</li>
+              <li><strong>HTTPS:</strong> HTTP nhưng có mã hóa bảo mật bằng SSL/TLS.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-button">6. Một số port mạng thông dụng</button>
+        <div class="accordion-content">
+          <div class="content-inner">
+            <ul>
+              <li><strong>20/21:</strong> FTP</li>
+              <li><strong>22:</strong> SSH</li>
+              <li><strong>23:</strong> Telnet</li>
+              <li><strong>25:</strong> SMTP</li>
+              <li><strong>53:</strong> DNS</li>
+              <li><strong>67/68:</strong> DHCP</li>
+              <li><strong>80:</strong> HTTP</li>
+              <li><strong>110:</strong> POP3</li>
+              <li><strong>143:</strong> IMAP</li>
+              <li><strong>443:</strong> HTTPS</li>
+              <li><strong>3306:</strong> MySQL</li>
+              <li><strong>3389:</strong> Remote Desktop</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-button">7. Phân tích kỹ hơn về bắt tay 3 bước trên TCP</button>
+        <div class="accordion-content">
+          <div class="content-inner">
+            <p>TCP dùng cơ chế <strong>3-way handshake</strong> để thiết lập kết nối giữa client và server:</p>
+            <ul>
+              <li><strong>Bước 1 - SYN:</strong> Client gửi gói SYN để yêu cầu kết nối.</li>
+              <li><strong>Bước 2 - SYN-ACK:</strong> Server phản hồi bằng SYN-ACK để chấp nhận.</li>
+              <li><strong>Bước 3 - ACK:</strong> Client gửi ACK xác nhận, kết nối được thiết lập.</li>
+            </ul>
+            <p style="margin-top: 8px;">
+              Cách này giúp hai bên đồng bộ trạng thái trước khi truyền dữ liệu thật.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-button">8. UDP hoạt động như thế nào?</button>
+        <div class="accordion-content">
+          <div class="content-inner">
+            <p>
+              UDP là giao thức truyền dữ liệu <strong>không cần thiết lập kết nối trước</strong>.
+              Nó chỉ gửi gói tin đi, không kiểm tra xem bên kia có nhận đủ hay không.
+            </p>
+            <ul>
+              <li>Nhanh hơn TCP vì ít cơ chế kiểm tra.</li>
+              <li>Thường dùng cho game online, livestream, gọi thoại/video.</li>
+              <li>Phù hợp khi tốc độ quan trọng hơn độ chính xác tuyệt đối.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-button">9. VPN là gì?</button>
+        <div class="accordion-content">
+          <div class="content-inner">
+            <p>
+              <strong>VPN (Virtual Private Network)</strong> là mạng riêng ảo, giúp tạo kết nối an toàn
+              giữa thiết bị của bạn với Internet thông qua một máy chủ trung gian.
+            </p>
+            <ul>
+              <li>Mã hóa dữ liệu khi truyền đi.</li>
+              <li>Giúp tăng tính riêng tư.</li>
+              <li>Có thể dùng để truy cập tài nguyên nội bộ từ xa.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll(".accordion-button");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const content = button.nextElementSibling;
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
